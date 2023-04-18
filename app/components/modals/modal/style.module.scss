@@ -1,0 +1,60 @@
+.backdrop {
+  @apply flex justify-center items-center 
+  overflow-x-hidden overflow-y-auto fixed z-50
+  inset-0 outline-none  bg-neutral-800/70
+  focus:outline-none;
+}
+
+.modal-wrapper {
+  @apply relative h-full w-full my-6 mx-auto
+  md:w-4/6 md:h-auto
+  lg:w-3/6 
+  xl:w-2/5;
+}
+
+// MODAL
+.modal {
+  @apply h-full transition duration-300 translate-y-full opacity-0;
+
+  &.isOpen {
+    @apply translate-y-0 opacity-100;
+  }
+}
+
+// MODAL-CONTENT
+.modal__content {
+  @apply flex flex-col w-full h-full relative
+  border-0 rounded-lg shadow-lg bg-white outline-none
+  focus:outline-none 
+  md:h-auto;
+}
+
+// MODAL-HEADER
+.modal-header {
+  @apply flex justify-center items-center relative p-6
+  rounded-t border;
+}
+
+.modal-header__button {
+  @apply absolute left-9 p-1
+  border-0 transition
+  hover:opacity-70;
+}
+
+.modal-header__title {
+  @apply text-lg font-semibold;
+}
+
+// MODAL-BODY
+.modal-body {
+  @apply flex-auto relative p-6;
+}
+
+// MODAL-FOOTER
+.modal-footer {
+  @apply flex flex-col gap-2 p-6;
+}
+
+.modal-footer__buttons {
+  @apply flex flex-row items-center w-full gap-4;
+}

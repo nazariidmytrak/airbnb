@@ -1,0 +1,35 @@
+.search {
+  @apply w-full py-2 
+  border rounded-full shadow-sm transition cursor-pointer
+  hover:shadow-md
+  md:w-auto;
+}
+.search__container {
+  @apply flex flex-row items-center justify-between;
+}
+
+.search__anywhere {
+  @apply px-6 
+  text-sm font-semibold;
+}
+
+.search__anyweek {
+  @apply hidden px-6 flex-1 
+  text-sm font-semibold border-x text-center
+  sm:block;
+}
+
+.search__xz {
+  @apply flex flex-row gap-3 items-center pl-6 pr-2
+  text-sm text-gray-600;
+}
+
+.search__guests {
+  @apply hidden 
+  sm:block;
+}
+
+.search__icon-wrapper {
+  @apply p-2
+  bg-rose-500 rounded-full text-white;
+}

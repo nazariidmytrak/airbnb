@@ -1,0 +1,17 @@
+.register-modal-body {
+  @apply flex flex-col gap-4;
+}
+
+.register-modal-footer {
+  @apply flex flex-col gap-4 mt-3;
+}
+
+.register-modal-footer__action {
+  @apply flex flex-row items-center justify-center gap-2 mt-4
+  text-neutral-500 font-light;
+}
+
+.register-modal-footer__login {
+  @apply text-neutral-800 cursor-pointer underline-offset-4
+  hover:underline;
+}

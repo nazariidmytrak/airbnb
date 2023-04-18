@@ -1,0 +1,39 @@
+.input-wrapper {
+  @apply w-full relative;
+}
+
+.input-icon {
+  @apply absolute top-5 left-2
+   text-neutral-700;
+}
+
+.input {
+  @apply w-full p-4 pt-6 pl-4
+  font-light bg-white rounded-md outline-none transition
+  border-2 border-neutral-300
+  focus:border-black
+  disabled:opacity-70 disabled:cursor-not-allowed;
+
+  &.hasPrice {
+    @apply pl-9;
+  }
+
+  &.error {
+    @apply border-rose-500
+    focus:border-rose-500;
+  }
+}
+
+.label {
+  @apply absolute left-4 top-5 z-10 
+  transform origin-[0] duration-200 -translate-y-4 
+  text-base text-zinc-400;
+
+  &.hasPrice {
+    @apply left-9;
+  }
+
+  &.error {
+    @apply text-rose-500;
+  }
+}

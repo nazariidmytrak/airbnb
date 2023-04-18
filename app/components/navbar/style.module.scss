@@ -1,0 +1,14 @@
+.navbar {
+  @apply w-full fixed z-10 
+  bg-white shadow-sm;
+}
+
+.navbar__container {
+  @apply py-4 
+  border-b;
+}
+
+.navbar__content {
+  @apply flex flex-row items-center justify-between gap-3 
+  md:gap-0;
+}
