@@ -3,7 +3,7 @@
 import styles from './style.module.scss';
 import { FC } from 'react';
 import { BiDollar } from 'react-icons/bi';
-import { InputProps } from '@/app/interfaces/input';
+import { InputProps } from '@/app/interfaces/inputs/input';
 
 const Input: FC<InputProps> = ({
   id,

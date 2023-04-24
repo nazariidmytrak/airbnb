@@ -3,7 +3,7 @@
 import styles from './style.module.scss';
 import axios from 'axios';
 import { signIn } from 'next-auth/react';
-import { useState } from 'react';
+import { useState, useCallback } from 'react';
 import { FcGoogle } from 'react-icons/fc';
 import { AiFillGithub } from 'react-icons/ai';
 import { FieldValues, SubmitHandler, useForm } from 'react-hook-form';
@@ -19,6 +19,11 @@ const RegisterModal = () => {
   const [isLoading, setIsLoading] = useState(false);
   const registerModal = useRegisterModal();
   const loginModal = useLoginModal();
+
+  const toggle = useCallback(() => {
+    registerModal.onClose();
+    loginModal.onOpen();
+  }, [loginModal, registerModal]);
 
   const {
     register,
@@ -101,10 +106,7 @@ const RegisterModal = () => {
       <div className={styles['register-modal-footer__action']}>
         <div>Already have an account</div>
         <div
-          onClick={() => {
-            registerModal.onClose();
-            loginModal.onOpen();
-          }}
+          onClick={toggle}
           className={styles['register-modal-footer__login']}
         >
           Log in

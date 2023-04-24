@@ -1,0 +1,9 @@
+.category-input {
+  @apply flex flex-col gap-3 p-4
+  border-2 rounded-xl transition cursor-pointer
+  hover:border-black;
+}
+
+.category-input__label{
+  @apply font-semibold
+}

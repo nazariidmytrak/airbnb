@@ -3,7 +3,7 @@
 import styles from './style.module.scss';
 import { signIn } from 'next-auth/react';
 import { useRouter } from 'next/navigation';
-import { useState } from 'react';
+import { useState, useCallback } from 'react';
 import { FcGoogle } from 'react-icons/fc';
 import { AiFillGithub } from 'react-icons/ai';
 import { FieldValues, SubmitHandler, useForm } from 'react-hook-form';
@@ -21,6 +21,11 @@ const LoginModal = () => {
   const registerModal = useRegisterModal();
 
   const router = useRouter();
+
+  const toggle = useCallback(() => {
+    loginModal.onClose();
+    registerModal.onOpen();
+  }, [loginModal, registerModal]);
 
   const {
     register,
@@ -97,13 +102,7 @@ const LoginModal = () => {
       />
       <div className={styles['login-modal-footer__action']}>
         <div>Don't have an account?</div>
-        <div
-          onClick={() => {
-            loginModal.onClose();
-            registerModal.onOpen();
-          }}
-          className={styles['login-modal-footer__login']}
-        >
+        <div onClick={toggle} className={styles['login-modal-footer__login']}>
           Sign up
         </div>
       </div>

@@ -1,8 +1,8 @@
 import { create } from 'zustand';
 
-import { LoginModalProps } from '../interfaces/modals/loginModal';
+import { HookModalProps } from '../interfaces/modals/hookModal';
 
-const useLoginModal = create<LoginModalProps>((set) => ({
+const useLoginModal = create<HookModalProps>((set) => ({
   isOpen: false,
   onOpen: () => set({ isOpen: true }),
   onClose: () => set({ isOpen: false }),

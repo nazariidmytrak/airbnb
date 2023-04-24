@@ -1,0 +1,11 @@
+.rent-modal-body {
+  @apply flex flex-col gap-4;
+}
+.rent-modal-categories {
+  @apply grid grid-cols-1 gap-3 max-h-[50vh] overflow-y-auto
+  md:grid-cols-2;
+}
+
+.rent-modal-category {
+  @apply col-span-1
+}
