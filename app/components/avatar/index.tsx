@@ -3,7 +3,7 @@
 import styles from './style.module.scss';
 import Image from 'next/image';
 import { FC } from 'react';
-import { AvatarProps } from '@/app/interfaces/avatar';
+import { AvatarProps } from '@/app/interfaces/navbar/avatar';
 
 const Avatar: FC<AvatarProps> = ({ src }) => {
   return (

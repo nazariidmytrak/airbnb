@@ -1,6 +1,6 @@
 import { create } from 'zustand';
 
-import { LoginModalProps } from '../interfaces/loginModal';
+import { LoginModalProps } from '../interfaces/modals/loginModal';
 
 const useLoginModal = create<LoginModalProps>((set) => ({
   isOpen: false,

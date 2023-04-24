@@ -1,6 +1,6 @@
 import { create } from 'zustand';
 
-import { RegisterModalProps } from '../interfaces/registerModal';
+import { RegisterModalProps } from '../interfaces/modals/registerModal';
 
 const useRegisterModal = create<RegisterModalProps>((set) => ({
   isOpen: false,

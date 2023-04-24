@@ -5,7 +5,7 @@ import styles from './style.module.scss';
 import { FC } from 'react';
 import { useState, useEffect, useCallback } from 'react';
 import { AiOutlineClose } from 'react-icons/ai';
-import { ModalProps } from '@/app/interfaces/modal';
+import { ModalProps } from '@/app/interfaces/modals/modal';
 import Button from '../../button';
 
 const Modal: FC<ModalProps> = ({

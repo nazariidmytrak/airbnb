@@ -8,7 +8,7 @@ import MenuItem from './menuItem';
 import Avatar from '../../avatar';
 import useRegisterModal from '@/app/hooks/useRegisterModal';
 import useLoginModal from '@/app/hooks/useLoginModal';
-import { UserMenuProps } from '@/app/interfaces/userMenu';
+import { UserMenuProps } from '@/app/interfaces/navbar/userMenu';
 
 const UserMenu: FC<UserMenuProps> = ({ currentUser }) => {
   const registerModal = useRegisterModal();

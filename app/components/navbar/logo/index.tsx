@@ -8,6 +8,7 @@ const Logo = () => {
   const router = useRouter();
   return (
     <Image
+      onClick={() => router.push('/')}
       className={styles.logo}
       src='/images/logo.webp'
       priority
