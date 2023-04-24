@@ -1,9 +1,11 @@
 import './globals.css';
 import { Raleway } from 'next/font/google';
 
+import ToasterProvider from './providers/ToasterProvider';
 import Navbar from './components/navbar';
 import RegisterModal from './components/modals/registerModal';
-import ToasterProvider from './providers/ToasterProvider';
+import LoginModal from './components/modals/loginModal';
+import getCurrentUser from './actions/getCurrentUser';
 
 export const metadata = {
   title: 'AIRBNB',
@@ -15,17 +17,20 @@ const font = Raleway({
   weight: '400',
 });
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
+  const currentUser = await getCurrentUser();
+
   return (
     <html lang='en'>
       <body className={font.className}>
         <ToasterProvider />
-        <RegisterModal isOpen actionLabel='Submit' title='Login Modal' />
-        <Navbar />
+        <LoginModal />
+        <RegisterModal />
+        <Navbar currentUser={currentUser} />
         {children}
       </body>
     </html>

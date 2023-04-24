@@ -2,12 +2,14 @@
 
 import styles from './style.module.scss';
 import Image from 'next/image';
+import { FC } from 'react';
+import { AvatarProps } from '@/app/interfaces/avatar';
 
-const Avatar = () => {
+const Avatar: FC<AvatarProps> = ({ src }) => {
   return (
     <Image
       className={styles.avatar}
-      src='/images/placeholder.webp'
+      src={src || '/images/placeholder.webp'}
       height='30'
       width='30'
       alt='Avatar'

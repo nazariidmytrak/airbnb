@@ -6,7 +6,7 @@
 }
 
 .modal-wrapper {
-  @apply relative h-full w-full my-6 mx-auto
+  @apply relative h-full w-full my-6 mx-auto overflow-hidden
   md:w-4/6 md:h-auto
   lg:w-3/6 
   xl:w-2/5;
