@@ -51,7 +51,7 @@ const Modal: FC<ModalProps> = ({
 
   return (
     <>
-      <div onClick={onClose} className={styles.backdrop}>
+      <div className={styles.backdrop}>
         <div className={styles['modal-wrapper']}>
           <div className={`${styles['modal']} ${showModal && styles.isOpen}`}>
             <div className={styles['modal__content']}>

@@ -10,6 +10,7 @@ const Logo = () => {
     <Image
       className={styles.logo}
       src='/images/logo.webp'
+      priority
       height='100'
       width='100'
       alt='Logo'
