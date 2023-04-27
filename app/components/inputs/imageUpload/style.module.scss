@@ -1,0 +1,10 @@
+.image-upload {
+  @apply flex flex-col justify-center items-center gap-4
+  relative p-20 cursor-pointer transition
+  border-2 border-dashed border-neutral-300 text-neutral-600
+  hover:opacity-70;
+}
+
+.image-upload__text {
+  @apply font-semibold text-lg;
+}
