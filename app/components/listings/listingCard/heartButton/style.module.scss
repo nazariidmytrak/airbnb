@@ -1,0 +1,8 @@
+.heart-button {
+  @apply relative transition cursor-pointer
+  hover:opacity-80;
+}
+.heart-button__icon {
+  @apply absolute -top-[2px] -right-[2px]
+  fill-white;
+}

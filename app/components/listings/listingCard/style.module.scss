@@ -1,0 +1,40 @@
+.listing-card {
+  @apply col-span-1 cursor-pointer;
+}
+
+.listing-card__content {
+  @apply grid w-full gap-2;
+}
+
+.listing-card__image-wrapper {
+  @apply w-full relative overflow-hidden
+  aspect-square rounded-xl;
+}
+
+.listing-card__image {
+  @apply w-full h-full transition object-cover;
+}
+
+.listing-card__icon {
+  @apply absolute top-3 right-3;
+}
+
+.listing-card__location {
+  @apply font-semibold text-lg;
+}
+
+.listing-card__category {
+  @apply font-light text-neutral-500;
+}
+
+.listing-card__price {
+  @apply flex flex-row items-center gap-1;
+}
+
+.listing-card__price-value {
+  @apply font-semibold;
+}
+
+.listing-card__price-label {
+  @apply font-light;
+}

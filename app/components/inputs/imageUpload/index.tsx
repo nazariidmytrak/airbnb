@@ -31,7 +31,7 @@ const ImageUpload: FC<ImageUploadProps> = ({ value, onChange }) => {
             <TbPhotoPlus size={50} />
             <div className={styles['image-upload__text']}>Click to upload</div>
             {value && (
-              <div className='absolute w-full h-full inset-0'>
+              <div className={styles['image-upload__image']}>
                 <Image
                   fill
                   src={value}

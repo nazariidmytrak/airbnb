@@ -8,3 +8,7 @@
 .image-upload__text {
   @apply font-semibold text-lg;
 }
+
+.image-upload__image {
+  @apply absolute w-full h-full inset-0;
+}

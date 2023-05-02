@@ -1,0 +1,8 @@
+.empty-state {
+  @apply flex flex-col justify-center items-center
+  gap-4 h-[60vh];
+}
+
+.empty-state__button {
+  @apply w-48;
+}
