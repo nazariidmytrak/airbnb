@@ -1,8 +1,9 @@
-import { Listing, Reservation } from '@prisma/client';
-import { SafeUser } from '../safeUser';
+import { Reservation } from '@prisma/client';
+import { SafeUser } from '../safe/safeUser';
+import { SafeListing } from '../safe/safeListings';
 
 export interface ListingCardProps {
-  data: Listing;
+  data: SafeListing;
   reservation?: Reservation;
   disabled?: boolean;
   actionId?: string;

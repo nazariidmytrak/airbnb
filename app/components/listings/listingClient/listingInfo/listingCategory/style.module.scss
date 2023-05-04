@@ -1,0 +1,23 @@
+.listing-category {
+  @apply grid gap-6;
+}
+
+.listing-category__content {
+  @apply flex flex-row items-center gap-4;
+}
+
+.listing-category__icon {
+  @apply text-neutral-600;
+}
+
+.listing-category__info {
+  @apply grid;
+}
+
+.listing-category__info-label {
+  @apply text-lg font-semibold;
+}
+
+.listing-category__info-description {
+  @apply text-neutral-500 font-light;
+}

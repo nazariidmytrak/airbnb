@@ -1,0 +1,21 @@
+.listing-info {
+  @apply col-span-4 grid gap-8;
+}
+
+.listing-info__header {
+  @apply grid gap-2;
+}
+
+.listing-info__header-top {
+  @apply flex flex-row items-center gap-2
+  font-semibold text-xl;
+}
+
+.listing-info__header-bottom {
+  @apply flex flex-row items-center gap-4 
+  font-light text-neutral-500;
+}
+
+.listing-info__description {
+  @apply text-lg text-neutral-500 font-light;
+}

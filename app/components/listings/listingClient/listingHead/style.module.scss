@@ -1,0 +1,12 @@
+.listing-head {
+  @apply relative overflow-hidden w-full h-[30vh] 
+  md:h-[60vh];
+}
+
+.listing-head__img {
+  @apply object-cover;
+}
+
+.listing-head__icon {
+  @apply absolute top-5 right-5;
+}

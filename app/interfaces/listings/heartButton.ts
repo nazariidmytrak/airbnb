@@ -1,4 +1,4 @@
-import { SafeUser } from '../safeUser';
+import { SafeUser } from '../safe/safeUser';
 
 export interface HeartButtonProps {
   listingId: string;

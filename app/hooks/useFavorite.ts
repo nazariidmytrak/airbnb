@@ -3,7 +3,7 @@ import { useRouter } from 'next/navigation';
 import { useCallback, useMemo, MouseEvent } from 'react';
 import { toast } from 'react-hot-toast';
 
-import { SafeUser } from '../interfaces/safeUser';
+import { SafeUser } from '../interfaces/safe/safeUser';
 import useLoginModal from './useLoginModal';
 
 interface IUseFavorite {
@@ -29,14 +29,14 @@ const useFavorite = ({ listingId, currentUser }: IUseFavorite) => {
       }
 
       try {
-        let request;
-        hasFavorited
-          ? (request = () => axios.delete(`/api/favorites/${listingId}`))
-          : (request = () => axios.post(`api/favorites/${listingId}`));
+        const endpoint = `/api/favorites/${listingId}`;
+        const method = hasFavorited ? 'delete' : 'post';
 
-        await request();
+        await axios[method](endpoint);
+        toast.success(
+          hasFavorited ? 'Deleted successfully' : 'Added successfully'
+        );
         router.refresh();
-        toast.success('Success');
       } catch (error) {
         toast.error('Something went wrong');
       }

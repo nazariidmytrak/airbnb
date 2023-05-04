@@ -1,0 +1,12 @@
+.listing {
+  @apply max-w-screen-lg mx-auto;
+}
+
+.listing__content {
+  @apply grid gap-6;
+}
+
+.listing__about {
+  @apply grid grid-cols-1 mt-6
+  md:grid-cols-7 md:gap-10;
+}
