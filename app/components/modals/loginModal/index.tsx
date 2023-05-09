@@ -101,7 +101,7 @@ const LoginModal = () => {
         outline
       />
       <div className={styles['login-modal-footer__action']}>
-        <div>Don't have an account?</div>
+        <div>Don&apos;t have an account?</div>
         <div onClick={toggle} className={styles['login-modal-footer__login']}>
           Sign up
         </div>

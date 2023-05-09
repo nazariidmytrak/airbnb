@@ -1,11 +1,11 @@
-import { Reservation } from '@prisma/client';
-import { SafeListing } from '../safe/safeListings';
+import { SafeListing } from '../safe/safeListing';
+import { SafeReservation } from '../safe/safeReservation';
 import { SafeUser } from '../safe/safeUser';
 
 export interface ListingClientProps {
   listing: SafeListing & {
-    user: SafeUser;
+    user: SafeUser | null;
   };
-  reservations?: Reservation[];
+  reservations?: SafeReservation[];
   currentUser: SafeUser | null;
 }
