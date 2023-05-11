@@ -8,12 +8,12 @@ import { FcGoogle } from 'react-icons/fc';
 import { AiFillGithub } from 'react-icons/ai';
 import { FieldValues, SubmitHandler, useForm } from 'react-hook-form';
 import toast from 'react-hot-toast';
-import useRegisterModal from '@/app/hooks/useRegisterModal';
-import useLoginModal from '@/app/hooks/useLoginModal';
+import { useRegisterModal } from '@/app/shared/model/hooks/useModal';
+import { useLoginModal } from '@/app/shared/model/hooks/useModal';
 import Modal from '../modal';
-import Heading from '../modal/heading';
-import Input from '../../inputs/input';
-import Button from '../../button';
+import Heading from '@/app/shared/ui/heading';
+import Input from '@/app/shared/ui/input';
+import Button from '@/app/shared/ui/button';
 
 const RegisterModal = () => {
   const [isLoading, setIsLoading] = useState(false);

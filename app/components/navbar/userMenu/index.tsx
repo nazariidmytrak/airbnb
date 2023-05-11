@@ -5,10 +5,10 @@ import { signOut } from 'next-auth/react';
 import { FC, useState, useCallback } from 'react';
 import { AiOutlineMenu } from 'react-icons/ai';
 import MenuItem from './menuItem';
-import Avatar from '../../avatar';
-import useRegisterModal from '@/app/hooks/useRegisterModal';
-import useLoginModal from '@/app/hooks/useLoginModal';
-import useRentModal from '@/app/hooks/useRentModal';
+import Avatar from '@/app/shared/ui/avatar';
+import { useRegisterModal } from '@/app/shared/model/hooks/useModal';
+import { useLoginModal } from '@/app/shared/model/hooks/useModal';
+import { useRentModal } from '@/app/shared/model/hooks/useModal';
 import { UserMenuProps } from '@/app/interfaces/navbar/userMenu';
 import { useRouter } from 'next/navigation';
 

@@ -5,8 +5,8 @@ import axios from 'axios';
 import { FC, useCallback, useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { toast } from 'react-hot-toast';
-import Heading from '../../modals/modal/heading';
-import Container from '../../container';
+import Heading from '@/app/shared/ui/heading';
+import Container from '@/app/shared/ui/container';
 import ListingCard from '../../listings/listingCard';
 import { ReservationClientProps } from '@/app/interfaces/reservations/reservationClient';
 

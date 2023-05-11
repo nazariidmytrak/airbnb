@@ -2,8 +2,8 @@
 
 import styles from './style.module.scss';
 import { FC } from 'react';
-import Container from '../container';
-import Logo from './logo';
+import Container from '@/app/shared/ui/container';
+import Logo from '@/app/shared/ui/logo';
 import Search from './search';
 import UserMenu from './userMenu';
 import Categories from './categories';

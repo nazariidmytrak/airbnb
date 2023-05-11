@@ -6,9 +6,9 @@ import Image from 'next/image';
 import { useRouter } from 'next/navigation';
 import { format } from 'date-fns';
 import { ListingCardProps } from '@/app/interfaces/listings/listingCard';
-import useCountries from '@/app/hooks/useCountries';
-import HeartButton from './heartButton';
-import Button from '../../button';
+import useCountries from '@/app/shared/model/hooks/useCountries';
+import HeartButton from '@/app/shared/ui/heart-button';
+import Button from '@/app/shared/ui/button';
 
 const ListingCard: FC<ListingCardProps> = ({
   data,

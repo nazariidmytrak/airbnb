@@ -7,14 +7,14 @@ import { useRouter } from 'next/navigation';
 import { FieldValues, SubmitHandler, useForm } from 'react-hook-form';
 import { useMemo, useState } from 'react';
 import Modal from '../modal';
-import Heading from '../modal/heading';
-import Input from '../../inputs/input';
+import Heading from '@/app/shared/ui/heading';
+import Input from '@/app/shared/ui/input';
 import CategoryInput from '../../inputs/categoryInput';
-import CountrySelect from '../../inputs/countrySelect';
+import CountrySelect from '@/app/shared/ui/countrySelect';
 import ImageUpload from '../../inputs/imageUpload';
 import Counter from '../../inputs/counter';
 import { CATEGORIES } from '@/app/constants';
-import useRentModal from '@/app/hooks/useRentModal';
+import { useRentModal } from '@/app/shared/model/hooks/useModal';
 import { toast } from 'react-hot-toast';
 
 enum STEPS {
@@ -61,7 +61,7 @@ const RentModal = () => {
   const imageSrc = watch('imageSrc');
 
   const Map = useMemo(
-    () => dynamic(() => import('./map'), { ssr: false }),
+    () => dynamic(() => import('@/app/shared/ui/map'), { ssr: false }),
     [location]
   );
 

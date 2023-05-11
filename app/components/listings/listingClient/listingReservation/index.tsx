@@ -3,8 +3,8 @@
 import styles from './style.module.scss';
 import { FC } from 'react';
 import { ListingReservationProps } from '@/app/interfaces/listings/listingReservation';
-import Calendar from '@/app/components/inputs/calendar';
-import Button from '@/app/components/button';
+import Calendar from '@/app/shared/ui/calendar';
+import Button from '@/app/shared/ui/button';
 
 const ListingReservation: FC<ListingReservationProps> = ({
   price,

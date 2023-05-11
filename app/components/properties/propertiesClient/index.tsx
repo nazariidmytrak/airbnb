@@ -5,8 +5,8 @@ import { FC, useState, useCallback } from 'react';
 import { useRouter } from 'next/navigation';
 import axios from 'axios';
 import { PropertiesClientProps } from '@/app/interfaces/properties/propertiesClient';
-import Container from '@/app/components/container';
-import Heading from '@/app/components/modals/modal/heading';
+import Container from '@/app/shared/ui/container';
+import Heading from '@/app/shared/ui/heading';
 import { toast } from 'react-hot-toast';
 import ListingCard from '../../listings/listingCard';
 

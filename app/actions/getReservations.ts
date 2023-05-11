@@ -1,4 +1,4 @@
-import prisma from '@/app/libs/prismadb';
+import prisma from '@/app/shared/model/libs/prismadb';
 
 interface IParams {
   userId?: string;

@@ -7,12 +7,12 @@ import { Range } from 'react-date-range';
 import { formatISO } from 'date-fns';
 import { useState, useMemo, useCallback } from 'react';
 import Modal from '../modal';
-import useSearchModal from '@/app/hooks/useSearchModal';
+import { useSearchModal } from '@/app/shared/model/hooks/useModal';
 import dynamic from 'next/dynamic';
 import { CountrySelectValue } from '@/app/interfaces/inputs/countrySelect';
-import Heading from '../modal/heading';
-import CountrySelect from '../../inputs/countrySelect';
-import Calendar from '../../inputs/calendar';
+import Heading from '@/app/shared/ui/heading';
+import CountrySelect from '@/app/shared/ui/countrySelect';
+import Calendar from '@/app/shared/ui/calendar';
 import Counter from '../../inputs/counter';
 
 enum STEPS {
@@ -35,8 +35,9 @@ const SearchModal = () => {
   const router = useRouter();
   const params = useSearchParams();
   const searchModal = useSearchModal();
+
   const Map = useMemo(
-    () => dynamic(() => import('../rentModal/map/'), { ssr: false }),
+    () => dynamic(() => import('@/app/shared/ui/map'), { ssr: false }),
     [location]
   );
 

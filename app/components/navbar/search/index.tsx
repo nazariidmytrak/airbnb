@@ -4,8 +4,8 @@ import styles from './style.module.scss';
 import { useMemo } from 'react';
 import { BiSearch } from 'react-icons/bi';
 import { useSearchParams } from 'next/navigation';
-import useSearchModal from '@/app/hooks/useSearchModal';
-import useCountries from '@/app/hooks/useCountries';
+import { useSearchModal } from '@/app/shared/model/hooks/useModal';
+import useCountries from '@/app/shared/model/hooks/useCountries';
 import { differenceInDays } from 'date-fns';
 
 const Search = () => {

@@ -1,7 +1,7 @@
 'use client';
 
 import styles from './style.module.scss';
-import Container from '../../container';
+import Container from '@/app/shared/ui/container';
 import CategoryBox from './categoryBox';
 import { CATEGORIES } from '@/app/constants';
 import { usePathname, useSearchParams } from 'next/navigation';

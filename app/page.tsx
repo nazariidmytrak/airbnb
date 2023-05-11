@@ -1,5 +1,5 @@
-import Container from './components/container';
-import EmptyState from './components/main/emptyState';
+import Container from '@/app/shared/ui/container';
+import EmptyState from '@/app/widgets/emptyState/ui';
 import getListings, { IListingsParams } from './actions/getListings';
 import ListingCard from './components/listings/listingCard';
 import getCurrentUser from './actions/getCurrentUser';

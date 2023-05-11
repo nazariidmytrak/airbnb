@@ -9,10 +9,10 @@ import { Range } from 'react-date-range';
 import { differenceInCalendarDays, eachDayOfInterval } from 'date-fns';
 import { ListingClientProps } from '@/app/interfaces/listings/listingClient';
 import { CATEGORIES } from '@/app/constants';
-import Container from '../../container';
+import Container from '@/app/shared/ui/container';
 import ListingHead from './listingHead';
 import ListingInfo from './listingInfo';
-import useLoginModal from '@/app/hooks/useLoginModal';
+import { useLoginModal } from '@/app/shared/model/hooks/useModal';
 import ListingReservation from './listingReservation';
 
 const initialDateRange = {

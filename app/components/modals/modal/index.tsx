@@ -6,7 +6,7 @@ import { FC } from 'react';
 import { useState, useEffect, useCallback } from 'react';
 import { AiOutlineClose } from 'react-icons/ai';
 import { ModalProps } from '@/app/interfaces/modals/modal';
-import Button from '../../button';
+import Button from '@/app/shared/ui/button';
 
 const Modal: FC<ModalProps> = ({
   actionLabel,

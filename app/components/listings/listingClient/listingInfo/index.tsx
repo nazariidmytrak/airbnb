@@ -4,11 +4,11 @@ import styles from './style.module.scss';
 import dynamic from 'next/dynamic';
 import { FC } from 'react';
 import { ListingInfoProps } from '@/app/interfaces/listings/listingInfo';
-import useCountries from '@/app/hooks/useCountries';
-import Avatar from '@/app/components/avatar';
+import useCountries from '@/app/shared/model/hooks/useCountries';
+import Avatar from '@/app/shared/ui/avatar';
 import ListingCategory from './listingCategory';
 
-const Map = dynamic(() => import('@/app/components/modals/rentModal/map'), {
+const Map = dynamic(() => import('@/app/shared/ui/map'), {
   ssr: false,
 });
 
@@ -23,6 +23,7 @@ const ListingInfo: FC<ListingInfoProps> = ({
 }) => {
   const { getByValue } = useCountries();
   const coordinates = getByValue(locationValue)?.latlng;
+
   return (
     <div className={styles['listing-info']}>
       <div className={styles['listing-info__header']}>

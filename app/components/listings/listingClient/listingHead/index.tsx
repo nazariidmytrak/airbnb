@@ -3,10 +3,10 @@
 import styles from './style.module.scss';
 import { FC } from 'react';
 import { ListingHeadProps } from '@/app/interfaces/listings/listingHead';
-import useCountries from '@/app/hooks/useCountries';
-import Heading from '@/app/components/modals/modal/heading';
+import useCountries from '@/app/shared/model/hooks/useCountries';
+import Heading from '@/app/shared/ui/heading';
 import Image from 'next/image';
-import HeartButton from '../../listingCard/heartButton';
+import HeartButton from '@/app/shared/ui/heart-button';
 
 const ListingHead: FC<ListingHeadProps> = ({
   id,
